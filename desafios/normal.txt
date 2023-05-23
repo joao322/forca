@@ -1,0 +1,89 @@
+Fruta:
+	Abacate
+    Banana
+    Caju
+    Damasco
+    Espinafre
+    Framboesa
+    Goiaba
+    Kiwi
+    Laranja
+    Manga
+    Nectarina
+    Pêssego
+    Quivi
+    Romã
+    Uva
+Animal:
+    Antílope
+    Borboleta
+    Camaleão
+    Dromedário
+    Elefante
+    Falcão
+    Girafa
+    Hiena
+    Iguana
+    Jacaré
+    Koala
+    Lêmure
+    Macaco
+    Narval
+    Ornitorrinco
+Pais:
+    Argentina
+    Brasil
+    Canadá
+    Dinamarca
+    Equador
+    França
+    Grécia
+    Holanda
+    Itália
+    Japão
+    Líbano
+    México
+    Noruega
+    Portugal
+    Rússia
+Profissao:
+	Advogado
+    Bombeiro
+    Carpinteiro
+    Dentista
+    Eletricista
+    Farmacêutico
+    Geólogo
+    Historiador
+    Instrutor
+    Jornalista
+    Kinesiologista
+    Limpador de janela
+    Médico
+    Nutricionista
+    Otorrinolaringologista
+Coisas da cozinha:
+    Colher
+    Garfo
+    Faca
+    Prato
+    Copo
+    Xícara
+    Panela
+    Frigideira
+    Forno
+    Liquidificador
+    Geladeira
+    Congelador
+    Torradeira
+    Cafeteira
+    Chaleira
+    Espremedor
+    Tábua de corte
+    Escorredor de louça
+    Pano de prato
+    Luva de cozinha
+    Abridor de lata
+    Abridor de garrafa
+    Forma para bolo
+    Forma para pizza

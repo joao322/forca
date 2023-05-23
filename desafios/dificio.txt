@@ -1,0 +1,264 @@
+Animal: 
+    Albatroz
+    Alpaca
+    Anchova
+    Bacalhau
+    Badejo
+    Barracuda
+    Beluga
+    Cágado
+    Chinchila
+    Craca
+    Dromedário
+    Escaravelho
+    Gerbo
+    Gnu
+    Gralha
+    Hamster
+    Lêmure
+    Lhama
+    Lince
+    Marreco
+    Melro
+    Ocapi
+    Ouriço
+    Pelicano
+    Percevejo
+    Pirilampo
+    Quati
+    Rouxinol
+    Sanguessuga
+    Surucucu
+    Tapir
+    Texugo
+    Vison
+    Zebu
+Fruta:
+    Abricó
+    Alfarroba
+    Bergamota
+    Ciriguela
+    Cranberry
+    Dendê
+    Feijoa
+    Groselha
+    Imbu
+    Jenipapo
+    Kiwi
+    Lichia
+    Mexerica
+    Nectarina
+    Nêspera
+    Pequi
+    Pistache
+    Pomelo
+    Puçá
+    Saguaraji
+Profissao:
+	Apicultor
+	Agrônomo
+	Auditor
+	Bartender
+	Cerimonialista
+	Chef
+	Coach
+	Desembargador
+	Despachante
+	Endocrinologista
+	Embaixador
+	Gerentólogo
+	Headhunter
+	Intérprete
+	Juiz
+	Nanotecnólogo
+	Nutrólogo
+	Pizzaiolo
+	Perito
+	Quiroprata
+	Roteirizador
+	Silvicultor
+	Trader
+	Taquígrafo
+	Turismólog
+Objeto:
+    Ampulheta
+    Anzol
+    Almofariz
+    Bidê
+    Botija
+    Candelabro
+    Daguerreótipo
+    Dedaleira
+    Desfibrilador
+    Diapasão
+    Echarpe
+    Estribo
+    Fagote
+    Fantoche
+    Fórceps
+    Freezer
+    Navalha
+    Jaleco
+    Modem
+    Narguilé
+    Nebulizador
+    Novelo
+    Oboé
+    Oxímetro
+    Pêndulo
+    Quepe
+    Selim
+    Sintetizador
+    Spray
+    Urinol
+    Vuvuzela
+    Webcam
+    Xadrez
+    Xequerê
+    Xilofone
+    Zíper
+História:
+    A Revolução Francesa
+    A Guerra Fria
+    A Idade Média
+    A Era Vitoriana
+    A Inconfidência Mineira
+    A Guerra de Troia
+    A Era Napoleônica
+    A Conquista do Oeste
+    O Império Romano
+    A Conquista Espanhola da América
+    A Primeira Guerra Mundial
+    A Segunda Guerra Mundial
+    O Renascimento
+    A Revolução Industrial
+    A Guerra do Vietnã
+    A Revolta dos Boxers
+    A Guerra dos Cem Anos
+    O Império Bizantino
+    A Guerra da Coreia
+    A Guerra do Peloponeso
+    A Guerra de Secessão
+Marcas:
+    Nike
+    Google
+    Samsung
+    Ferrari
+    Apple
+    Amazon
+    Sony
+    Adidas
+    Pepsi
+    Microsoft
+    Volkswagen
+    Disney
+    Lego
+    Uber
+    Netflix
+    Airbnb
+    Instagram
+    YouTube
+    Tesla
+    IBM
+    Visa
+    Mastercard
+    HP
+    Intel
+    Dell
+    Nokia
+    Huawei
+    Canon
+    Ikea
+    Dropbox
+    Skype
+    eBay
+    PayPal
+    Twitter
+    LinkedIn
+    TikTok
+    Zoom
+Filmes:
+    Titanic
+    Star Wars
+    Harry Potter
+    O Poderoso Chefão
+    Jurassic Park
+    O Senhor dos Anéis
+    O Exorcista
+    Psicose
+    De Volta para o Futuro
+    Indiana Jones
+    Matrix
+    Pulp Fiction
+    Clube da Luta
+    Forrest Gump
+    Avatar
+    Interestelar
+    A Origem
+    Kill Bill
+    Batman
+    Superman
+    Homem de Ferro
+    Thor
+    Capitão América
+    Vingadores
+    Coringa
+    Deadpool
+    Pantera Negra
+Jogos de videogame:
+    Super Mario Bros
+    Zelda
+    Sonic
+    Donkey Kong
+    Street Fighter
+    Mortal Kombat
+    Resident Evil
+    Final Fantasy
+    Metal Gear Solid
+    Grand Theft Auto
+    The Sims
+    Halo
+    Call of Duty
+    Minecraft
+    Fortnite
+    League of Legends
+    World of Warcraft
+    Diablo
+    Portal
+    Mass Effect
+    God of War
+    Tomb Raider
+    Uncharted
+    The Last of Us
+Pessoas famosas:
+    Albert Einstein
+    Isaac Newton
+    Leonardo da Vinci
+    Charles Darwin
+    Galileu Galilei
+    Stephen Hawking
+    Mahatma Gandhi
+    Nelson Mandela
+    Abraham Lincoln
+    Winston Churchill
+    Adolf Hitler
+    Barack Obama
+    Bill Gates
+    Steve Jobs
+    Elon Musk
+    Mark Zuckerberg
+    Jeff Bezos
+    Oprah Winfrey
+    Madonna
+    Michael Jackson
+    Beyoncé
+    Lady Gaga
+    Taylor Swift
+    Cristiano Ronaldo
+    Lionel Messi
+    Usain Bolt
+    Serena Williams
+    Roger Federer
+    Tiger Woods
+    Kobe Bryant
+    neymar jn

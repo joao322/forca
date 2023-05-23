@@ -1,0 +1,10 @@
+basico [ja]
+forca [ja]
+boneco [ja]
+tala filanizacao []
+ mostra quanto ganhou e quais letra errou ou um parabes
+dicas []
+ custa 6 e revela uma letra aleatroi  
+pontuacao []
+ quanto menos erra mais ponto ganha maixomo 6  ser usar adica so ganha 2
+key_openai: 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

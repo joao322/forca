@@ -1,0 +1,237 @@
+Gerenciador:
+
+    Screen:
+        name: 'menu'
+
+        Label:
+            text:'Forca'
+            pos: 0, root.height/2 - self.font_size
+
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: 0.45
+            padding: 10
+            spacing: '10dp'
+
+            Button:
+                text: "normal"
+                on_press: root.celetor('n')
+                on_release: app.root.current = 'game'
+
+            Button:
+                text: "dificil"
+                on_press: root.celetor('d')
+                on_release: app.root.current = 'game'
+
+
+    Game:
+        name: 'game'  
+
+    Tela_Finalizacao:
+        name: 'tela_final' 
+
+<Tela_Finalizacao>:
+    
+    BoxLayout:
+        size_hint_y: .50
+        orientation:'vertical'
+        padding: 5,
+        Label:
+            text:'Você quer'
+            pos: self.font_size/2 * (len(self.text)/2) - self.width//2,root.height/2  -  self.font_size 
+        Button:
+            text:'Continuar'
+        Button:
+            text: "Voltar para o menu"
+            
+<Game>:
+    Label:
+        text: 'caregando...'
+        id:tema
+        
+        font_size: 17
+        
+    # ciando um techado que so pode ser apertado uma vez
+    BoxLayout:
+        size_hint_y: None
+        height: root.height / 2 - 20
+        orientation: 'vertical'
+        padding: 5,
+
+        BoxLayout:
+            orientation: 'horizontal'
+
+            Button:
+                text: "A"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: a
+                
+            Button:
+                text: "B"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: b
+                
+            Button:
+                text: "C"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: c 
+                
+            Button:
+                text: "D"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: d
+                
+            Button:
+                text: "E"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: e
+                
+            Button:
+                text: "F"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: f
+
+            Button:
+                text: "G"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: g
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+
+            Button:
+                text: "H"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True         
+                id: h
+
+            Button:
+                text: "I"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: i
+
+            Button:
+                text: "J"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: j
+
+            Button:
+                text: "K"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: k
+
+            Button:
+                text: "L"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: l
+
+            Button:
+                text: "M"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: m
+
+            Button:
+                text: "N"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: n
+
+        BoxLayout:
+            orientation: 'horizontal'             
+
+            Button:
+                text: "O"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: o
+
+            Button:
+                text: "P"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: p
+
+            Button:
+                text: "Q"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: q
+
+            Button:
+                text: "R"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: r
+
+            Button:
+                text: "S"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: s
+
+            Button:
+                text: "T"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: t
+
+            Button:
+                text: "U"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: u
+
+
+        BoxLayout:
+            orientation: 'horizontal'             
+
+            Button:
+                text: "V"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: v
+
+            Button:
+                text: "W"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: w
+
+            Button:
+                text: "X"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: x
+
+            Button:
+                text: "Y"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: y
+
+            Button:
+                text: "Z"
+                on_press: root.techado(self.text), 
+                on_release: self.disabled = True
+                id: z
+
+            Button:
+                text: ""
+                disabled: True 
+
+            Button:
+                text: ""
+                disabled: True 
