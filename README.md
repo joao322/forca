@@ -4,12 +4,12 @@ um projeto do jogo forca usando o framework [kivy](https://kivy.org/)
 
 ## Instalacão
 
-`bibiotecas` obrigatorias
+`Bibiotecas` necesaria para usar o codigo
 ```bash
 pip3 install kivy
-pip3 install unidecode
+tets pip3 install unidecode
 ```
-`instalar` o repositorio
+`abaixar` o Repositorio
 ```bash
 git clone https://github.com/joao322/Forca
 ```
@@ -17,3 +17,5 @@ iniciar o projeto
 ```bash
 python3 main.py
 ```
+<hr>
+

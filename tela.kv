@@ -1,65 +1,83 @@
 Gerenciador:
 
     Screen:
-        name: 'menu'
+        name: "menu"
 
         Label:
-            text:'Forca'
+            text:"Forca"
             pos: 0, root.height/2 - self.font_size
 
         BoxLayout:
-            orientation: 'vertical'
+            orientation: "vertical"
             size_hint_y: 0.45
             padding: 10
-            spacing: '10dp'
+            spacing: "10dp"
 
             Button:
                 text: "normal"
-                on_press: root.celetor('n')
-                on_release: app.root.current = 'game'
+                on_press: root.celetor("n")
+                on_release: app.root.current = "game"
 
             Button:
                 text: "dificil"
-                on_press: root.celetor('d')
-                on_release: app.root.current = 'game'
+                on_press: root.celetor("d")
+                on_release: app.root.current = "game"
 
-
-    Game:
-        name: 'game'  
 
     Tela_Finalizacao:
-        name: 'tela_final' 
+        name: "tela_final" 
+    Game:
+        name: "game"  
+
 
 <Tela_Finalizacao>:
+
+    Label:
+        text:'pontos ganhado +' + str(root.pontos)
+        pos:0, root.height/2 - self.font_size
     
     BoxLayout:
         size_hint_y: .50
-        orientation:'vertical'
-        padding: 5,
+        orientation: "vertical"
+        padding: 10,
+        spacing: 10
+
         Label:
-            text:'Você quer'
-            pos: self.font_size/2 * (len(self.text)/2) - self.width//2,root.height/2  -  self.font_size 
+            text: "Você quer"
+            size_hint_x: 0.15
         Button:
-            text:'Continuar'
+            text:"Continuar"
+            on_press: app.root.current = 'game'
+
         Button:
             text: "Voltar para o menu"
-            
+            on_press: app.root.current = 'menu'
 <Game>:
     Label:
-        text: 'caregando...'
+        text: "caregando..."
         id:tema
-        
+        pos:self.font_size/2 * (len(self.text)/2) - self.width//2,root.height/2  -  self.font_size 
         font_size: 17
         
     # ciando um techado que so pode ser apertado uma vez
+    Button:
+        
+        background_color: 0.5, 0.5, 0.5, 0
+        size_hint: .05,.05
+        pos: root.width - self.size[0], root.height - self.size[1]
+        on_press: root.dica()
+    Image:
+        size_hint: .05, .05
+        source:'imagens/lapada.png'
+        pos: root.width - self.size[0], root.height - self.size[1]
     BoxLayout:
         size_hint_y: None
         height: root.height / 2 - 20
-        orientation: 'vertical'
+        orientation: "vertical"
         padding: 5,
 
         BoxLayout:
-            orientation: 'horizontal'
+            orientation: "horizontal"
 
             Button:
                 text: "A"
@@ -105,7 +123,7 @@ Gerenciador:
 
 
         BoxLayout:
-            orientation: 'horizontal'
+            orientation: "horizontal"
 
             Button:
                 text: "H"
@@ -150,7 +168,7 @@ Gerenciador:
                 id: n
 
         BoxLayout:
-            orientation: 'horizontal'             
+            orientation: "horizontal"             
 
             Button:
                 text: "O"
@@ -196,7 +214,7 @@ Gerenciador:
 
 
         BoxLayout:
-            orientation: 'horizontal'             
+            orientation: "horizontal"             
 
             Button:
                 text: "V"
