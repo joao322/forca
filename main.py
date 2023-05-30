@@ -322,7 +322,7 @@ class Game(Screen):
         for pos, letra in enumerate(self.letras_sertas):
             if letra not in  ' .-_':
                 self.lista_letras.append(Label(text=letra, pos=((self.spaco_padrao * .45 + pos * self.spaco_padrao) - (len(self.desafio) / 2 * self.spaco_padrao), 12 + self.spaco_padrao * .75 / 2),
-                                                font_size = f'{self.spaco_padrao *.75}sp' ))
+                                                font_size = self.spaco_padrao *.75 ))
                 self.add_widget(self.lista_letras[-1])
 
                 
@@ -424,7 +424,7 @@ class Game(Screen):
         for pos, letra in enumerate(self.desafio):
             if key == unidecode(letra):
                 self.lista_letras.append(Label(text=letra, pos=((self.spaco_padrao * .45 + pos * self.spaco_padrao) - (len(self.desafio) / 2 * self.spaco_padrao), 12 + self.spaco_padrao * .75 / 2),
-                                                font_size = f'{self.spaco_padrao *.75}sp' ))
+                                                font_size = self.spaco_padrao *.75))
                 self.add_widget(self.lista_letras[-1])
                 self.letras_sertas = self.letras_sertas[:pos] + letra +self.letras_sertas[pos+1:]
                 key_errada = False
