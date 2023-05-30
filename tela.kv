@@ -57,17 +57,17 @@ Gerenciador:
         text: "caregando..."
         id:tema
         pos:self.font_size/2 * (len(self.text)/2) - self.width//2,root.height/2  -  self.font_size 
-        font_size: 17
+        
         
     # ciando um techado que so pode ser apertado uma vez
     Button:
         
         background_color: 0.5, 0.5, 0.5, 0
-        size_hint: .05,.05
+        size_hint: .08,.08
         pos: root.width - self.size[0], root.height - self.size[1]
         on_press: root.dica()
     Image:
-        size_hint: .05, .05
+        size_hint: .08, .08
         source:'imagens/lapada.png'
         pos: root.width - self.size[0], root.height - self.size[1]
     BoxLayout:

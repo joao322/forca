@@ -22,13 +22,19 @@ global_dificudade = ''
 pontos_ganhados = 0
 resutado = 'derrota'
 texto_final = list()
-pontos_totais = 6
+
+   
+
+
 try:
     with open("pontos.json",'r')as file:
-        print(file)
+        pontos_totais = json.load(file)
 
 except FileNotFoundError:
-    pass
+    with open("pontos.json",'w')as file:
+        pontos_totais = 0
+        json.dump(0,file)
+        
 class Gerenciador(ScreenManager):
     def celetor(self, dificudade):  # responsavel pela celecão da dificudade
         global global_dificudade
@@ -55,7 +61,10 @@ class Tela_Finalizacao(Screen):  # cria a tela do final do jogo
             pontos_ganhados = 0
         self.pontos = pontos_ganhados
         pontos_totais += pontos_ganhados
-    
+        
+        with open("pontos.json",'w')as file:
+            json.dump(pontos_totais,file)
+        
     def removedor_widget(self,*args):
         if len(self.lista_letras) == 1:
             self.remove_widget(self.lista_letras[0])
@@ -146,7 +155,7 @@ class Tela_Finalizacao(Screen):  # cria a tela do final do jogo
             # Desenhar o braso direito do boneco
                 self.lista_desenho.append(Line(points=(width *.75 + width * .25 / 2, self.height /2 +60 - width * .30 + self.height /5,
                                                             width *.75 + width * .25 / 2 + 10, self.height /2 +30 - width * .30 + self.height /5), width=2))
-            # Desenhar a perna esquerda do boneco
+            # Desenhar a perna esTrueuerda do boneco
                 self.lista_desenho.append(Line(points=(width *.75 + width * .25 / 2, self.height /2 +30 - width * .30 + self.height /5,
                                                             width *.75 + width * .25 / 2 - 10, self.height /2  - width * .30 + self.height /5), width=2))
             # Desenhar a perna direita do boneco 
@@ -313,7 +322,7 @@ class Game(Screen):
         for pos, letra in enumerate(self.letras_sertas):
             if letra not in  ' .-_':
                 self.lista_letras.append(Label(text=letra, pos=((self.spaco_padrao * .45 + pos * self.spaco_padrao) - (len(self.desafio) / 2 * self.spaco_padrao), 12 + self.spaco_padrao * .75 / 2),
-                                                font_size = self.spaco_padrao *.75 ))
+                                                font_size = f'{self.spaco_padrao *.75}sp' ))
                 self.add_widget(self.lista_letras[-1])
 
                 
@@ -415,7 +424,7 @@ class Game(Screen):
         for pos, letra in enumerate(self.desafio):
             if key == unidecode(letra):
                 self.lista_letras.append(Label(text=letra, pos=((self.spaco_padrao * .45 + pos * self.spaco_padrao) - (len(self.desafio) / 2 * self.spaco_padrao), 12 + self.spaco_padrao * .75 / 2),
-                                                font_size = self.spaco_padrao *.75 ))
+                                                font_size = f'{self.spaco_padrao *.75}sp' ))
                 self.add_widget(self.lista_letras[-1])
                 self.letras_sertas = self.letras_sertas[:pos] + letra +self.letras_sertas[pos+1:]
                 key_errada = False
@@ -426,17 +435,21 @@ class Game(Screen):
         elif key_errada:
             self.forca(len(self.boneco_canvas) + 1) 
     def dica(self, *args): 
-        global pop
+        global pop, layout, label
         layout = BoxLayout(orientation='vertical')
-        layout.add_widget(Label(text=f'{pontos_totais} pontos' ))
-        layout.add_widget(Button(text='revela uma letra (6 pontos)', on_press=self.revelar_letras))
-      
-        pop = Popup(title='dicas', content=layout, pos=(self.width , self.height), size_hint=(.35, .35))
+        layout.add_widget(Label(text=f'você tem {pontos_totais} pontos' ))
+        layout.add_widget(Button(text='uma letra (6 pontos)',font_size='12sp', on_press=self.revelar_letras))
+        label = Label()
+        
+        layout.add_widget(label)
+
+        pop = Popup(title='Dicas', content=layout, pos=(self.width , self.height), size_hint=(.35, .35), pos_hint={'right': 1,'top': 0.9})
         pop.open()
         return pop
     def revelar_letras(self, *args):
-        global pontos_ganhados, pop
+        global pontos_ganhados, pop, layout, label, pontos_totais
         if pontos_totais >= 6:
+            pontos_totais -= 6
             pontos_ganhados -= 3
             letras_sortear = ''
             
@@ -444,13 +457,14 @@ class Game(Screen):
             for pos,letra in enumerate(self.desafio):
                 if letra != ' ' and self.letras_sertas[pos] == ' ':
                     letras_sortear += letra
-                    
-            self.techado(choice(letras_sortear))
+            letra_sorteada = choice(letras_sortear)
+            self.techado(letra_sorteada)
+            self.ids[unidecode(letra_sorteada.lower())].disabled = True
             pop.dismiss()
             del(choice)
             del(pop)
         else:
-            print('falta pontos')
+            label.text=f'falta {6 - pontos_totais } pontos'
             
     def reboot(self,*args):
         global resutado, texto_final, pontos_ganhados

@@ -3,7 +3,7 @@ forca [ja]
 boneco [ja]
 tala filanizacao [ja]
  mostra quanto ganhou e quais letra errou ou um parabes
-dicas []
+dicas [ja]
  custa 6 e revela uma letra aleatroi  
-pontuacao []
- quanto menos erra mais ponto ganha maixomo 6  ser usar adica so ganha 2
+pontuacao [ja]
+ quanto menos erra mais ponto ganha maixomo 8  
