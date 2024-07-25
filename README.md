@@ -1,4 +1,4 @@
-<h2>Introducão<\h2>
+<h2>Introducão
 
 um projeto do jogo forca  para Android usando  uma variação do framework [kivy](https://kivy.org/) o kivyMd 
 
