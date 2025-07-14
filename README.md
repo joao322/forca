@@ -1,10 +1,10 @@
 <h2>Introducão
 
-um projeto do jogo forca  para Android usando  uma variação do framework [kivy](https://kivy.org/) o kivyMd 
+uma recriação do jogo forca desenvolvido para Android usando framework kivyMd uma variação do framework [kivy](https://kivy.org/)
 
 ## Instalacão
 
-`Bibiotecas` necesaria para usar o codigo
+`Bibiotecas` necesaria para executar o script 
 ```bash
 pip3 install kivymd
 tets pip3 install unidecode
